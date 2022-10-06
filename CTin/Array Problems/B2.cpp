@@ -2,14 +2,16 @@
 using namespace std;
 
 typedef long long ll;
-ll a, b, n;
+ll cnt1, cnt2, cnt;
 
 int main() {
-  cin >> a >> b;
-  n = a + b;
-  ll m[n];
+  cin >> cnt1 >> cnt2;
+  cnt = cnt1 + cnt2;
+  ll a[cnt];
 
-  for (int i = 0; i < n; i++) cin >> m[i];
-  sort(m, m + n);
-  for (auto i: m) cout << i << " ";
+  for (ll i = 0; i < cnt; i++) cin >> a[i];
+  sort(a, a + cnt);
+
+  for (auto i : a) cout << i << " ";
+  cout << "\n";
 }

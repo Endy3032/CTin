@@ -1,0 +1,8 @@
+*
+!.gitignore
+!**/*.vscode
+!**/*.cpp
+!**/*.json
+!**/*.docx
+!**/*.xlsx
+!**/*.pdf

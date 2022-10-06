@@ -7,10 +7,5 @@
     "**/.DS_Store": true,
     "**/Thumbs.db": true
   },
-  "rpc.enabled": true,
-  "editor.defaultFormatter": "ms-vscode.cpptools",
-  "hide-files.files": [],
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  "hide-files.files": []
 }
