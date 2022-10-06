@@ -1,0 +1,52 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/node_modules": true,
+    "CORRECT": true,
+    "DAYSO": true,
+    "GIFTS": true,
+    "KEO": true,
+    "LED": true,
+    "MINSUMOFNEG": true,
+    "MPRIME": true,
+    "WALK": true,
+    "DEMHANG": true,
+    "BAI3": true,
+    "B_LINE": true,
+    "RADIO": true,
+    "DEMTU": true
+  },
+  "hide-files.files": [
+    "CORRECT",
+    "DAYSO",
+    "GIFTS",
+    "KEO",
+    "LED",
+    "MINSUMOFNEG",
+    "MPRIME",
+    "WALK",
+    "DEMHANG",
+    "BAI3",
+    "B_LINE",
+    "RADIO",
+    "DEMTU"
+  ],
+  "files.associations": {
+    "iostream": "cpp",
+    "ostream": "cpp",
+    "array": "cpp",
+    "bitset": "cpp",
+    "string_view": "cpp",
+    "initializer_list": "cpp",
+    "regex": "cpp",
+    "utility": "cpp",
+    "valarray": "cpp",
+    "cctype": "cpp"
+  },
+  "C_Cpp.errorSquiggles": "Disabled"
+}
