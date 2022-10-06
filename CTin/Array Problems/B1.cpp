@@ -1,15 +1,15 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#define ll long long
+typedef long long ll;
 ll n;
 
 bool isPrime(ll n) {
   if (n <= 7) return n > 1 && n != 4 && n != 6;
-  if (n % 2 == 0 || n % 3 == 0 || n % 5 == 0 || n % 7 == 0) return false;
+  if (n % 2 == 0 || n % 3 == 0) return false;
 
   ll rt = sqrt(n);
-  for (ll i = 11; i < rt; i += 6) if (n % i == 0 || n % (i + 2) == 0) return false;
+  for (ll i = 5; i < rt; i += 6) if (n % i == 0 || n % (i + 2) == 0) return false;
 
   return true;
 }
