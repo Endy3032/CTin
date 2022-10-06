@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+#define ll long long
+ll n;
+
+bool isPrime(ll n) {
+  if (n <= 7) return n > 1 && n != 4 && n != 6;
+  if (n % 2 == 0 || n % 3 == 0 || n % 5 == 0 || n % 7 == 0) return false;
+
+  ll rt = sqrt(n);
+  for (ll i = 11; i < rt; i += 6) if (n % i == 0 || n % (i + 2) == 0) return false;
+
+  return true;
+}
+
+int main() {
+  cin >> n;
+  ll a[n];
+
+  for (int i = 0; i < n; i++) {
+    cin >> a[i];
+    if (isPrime(a[i])) cout << a[i] << "\n";
+  }
+}
