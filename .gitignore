@@ -1,8 +1,7 @@
 *
-!.gitignore
-!**/*.vscode
-!**/*.cpp
-!**/*.json
-!**/*.docx
-!**/*.xlsx
-!**/*.pdf
+!*.*
+!*/
+OLD
+CSES
+*.dSYM
+**/.DS_Store
