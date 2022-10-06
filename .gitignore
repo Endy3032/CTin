@@ -2,6 +2,6 @@
 !*.*
 !*/
 OLD
-CSES
 *.dSYM
+*.bat
 **/.DS_Store
