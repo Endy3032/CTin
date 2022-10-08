@@ -19,13 +19,13 @@
         "command": "/usr/bin/g++",
         "args": [
           "-fdiagnostics-color=always",
+          "-std=c++17",
           "-g",
           "${file}",
           "-o",
           "${fileDirname}/${fileBasenameNoExtension}"
         ]
       },
-      "isBackground": true,
       "options": {
         "cwd": "${workspaceFolder}"
       },
@@ -35,7 +35,7 @@
         "isDefault": true
       },
       "presentation": {
-        "reveal": "always",
+        "reveal": "never",
         "panel": "dedicated",
         "showReuseMessage": false
       }
