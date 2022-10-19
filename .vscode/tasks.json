@@ -1,44 +1,44 @@
 {
-  "version": "2.0.0",
-  "tasks": [
-    {
-      "label": "Build C++ file",
-      "windows": {
-        "command": "c:\\mingw64\\bin\\gcc.exe",
-        "args": [
-          "-fdiagnostics-color=always",
-          "-static-libgcc",
-          "-static-libstdc++",
-          "-g",
-          "${file}",
-          "-o",
-          "${fileDirname}/${fileBasenameNoExtension}"
-        ]
-      },
-      "osx": {
-        "command": "/usr/bin/g++",
-        "args": [
-          "-fdiagnostics-color=always",
-          "-std=c++17",
-          "-g",
-          "${file}",
-          "-o",
-          "${fileDirname}/${fileBasenameNoExtension}"
-        ]
-      },
-      "options": {
-        "cwd": "${workspaceFolder}"
-      },
-      "problemMatcher": ["$gcc"],
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      },
-      "presentation": {
-        "reveal": "never",
-        "panel": "dedicated",
-        "showReuseMessage": false
-      }
-    }
-  ]
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build C++ file",
+			"windows": {
+				"command": "c:\\mingw64\\bin\\gcc.exe",
+				"args": [
+					"-fdiagnostics-color=always",
+					"-static-libgcc",
+					"-static-libstdc++",
+					"-g",
+					"${file}",
+					"-o",
+					"${fileDirname}/${fileBasenameNoExtension}"
+				]
+			},
+			"osx": {
+				"command": "/usr/bin/g++",
+				"args": [
+					"-fdiagnostics-color=always",
+					"-std=c++17",
+					"-g",
+					"${file}",
+					"-o",
+					"${fileDirname}/${fileBasenameNoExtension}"
+				]
+			},
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": ["$gcc"],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"presentation": {
+				"reveal": "never",
+				"panel": "dedicated",
+				"showReuseMessage": false
+			}
+		}
+	]
 }
