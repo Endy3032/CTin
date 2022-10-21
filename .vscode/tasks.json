@@ -4,7 +4,7 @@
 		{
 			"label": "Build C++ file",
 			"windows": {
-				"command": "c:\\mingw64\\bin\\gcc.exe",
+				"command": "c:\\mingw64\\bin\\g++.exe",
 				"args": [
 					"-fdiagnostics-color=always",
 					"-static-libgcc",
@@ -35,9 +35,8 @@
 				"isDefault": true
 			},
 			"presentation": {
-				"reveal": "never",
-				"panel": "dedicated",
-				"showReuseMessage": false
+				"reveal": "silent",
+				"panel": "dedicated"
 			}
 		}
 	]
