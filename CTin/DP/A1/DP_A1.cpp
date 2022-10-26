@@ -3,23 +3,17 @@ using namespace std;
 
 ifstream inp("DP_A1.inp");
 ofstream out("DP_A1.out");
-typedef long long ll;
+typedef unsigned long long ll;
 
-ll n, m, f[100000] = { 0 };
-
-ll fib(ll x) {
-	if (f[x] != 0) return f[x];
-	if (x == 0) return 0;
-	if (x < 3) return 1;
-	ll a = fib(x - 1) + fib(x - 2);
-	f[x] = a;
-	return f[x];
-}
+ll n, md = 1000000007, f[1000001] = {0, 1, 1};
 
 int main() {
-	cin >> n;
-	for (ll i = 0; i < n; i++) {
-		cin >> m;
-		cout << fib(m) << endl;
+	for (int i = 3; i <= 1000000; i++) {
+		f[i] = (f[i - 1] + f[i - 2]) % md;
+	}
+	int t; cin >> t;
+	while (t--) {
+		cin >> n;
+		cout << f[n] << endl;
 	}
 }
