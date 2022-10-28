@@ -11,5 +11,8 @@
 	"files.associations": {
 		"random": "cpp",
 		"iomanip": "cpp"
-	}
+	},
+	"cph.general.autoShowJudge": false,
+	"cph.general.defaultLanguage": "cpp",
+	"cph.general.timeOut": 1000
 }
