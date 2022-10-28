@@ -4,3 +4,4 @@
 *.exe
 *.dSYM
 **/.DS_Store
+.cph
