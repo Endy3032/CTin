@@ -5,7 +5,7 @@ typedef long long ll;
 ifstream inp("DP_A3.inp");
 ofstream out("DP_A3.out");
 
-ll n, m;
+ll n, m = -1e9;
 vector<ll> nums;
 
 int main() {
@@ -24,7 +24,6 @@ int main() {
 		mn[n - i - 1] = min(mn[n - i], nums[n - i - 1]);
 	}
 
-	m = LONG_LONG_MIN;
 	for (ll i = 1; i < n - 1; i++) m = max(m, nums[i] + mx[i - 1] - mn[i + 1]);
 	out << m << endl;
 }

@@ -5,7 +5,7 @@ ifstream inp("DP_A5.inp");
 ofstream out("DP_A5.out");
 
 typedef long long ll;
-ll n, m, s = 0, o = LONG_LONG_MIN;
+ll n, m, s = 0, o = -1e9;
 
 int main() {
 	inp >> n;
@@ -13,7 +13,7 @@ int main() {
 		inp >> m;
 		s += m;
 		o = max(s, o);
-		if (m < 0) s = 0;
+		if (o < 0) s = 0;
 	}
 	out << o << endl;
 }

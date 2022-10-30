@@ -10,7 +10,8 @@
 	"hide-files.files": [],
 	"files.associations": {
 		"random": "cpp",
-		"iomanip": "cpp"
+		"iomanip": "cpp",
+		"ios": "cpp"
 	},
 	"cph.general.autoShowJudge": false,
 	"cph.general.defaultLanguage": "cpp",

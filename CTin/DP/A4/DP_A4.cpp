@@ -10,7 +10,6 @@ ll n, m, l, r;
 int main() {
 	inp >> n;
 	vector<ll> psum(n + 1);
-	psum.push_back(0);
 
 	for (ll i = 1; i <= n; i++) {
 		inp >> m;
@@ -20,6 +19,6 @@ int main() {
 	inp >> m;
 	for (ll i = 0; i < m; i++) {
 		inp >> l >> r;
-		cout << psum[r] - psum[l - 1] << endl;
+		out << psum[r] - psum[l - 1] << endl;
 	}
 }
