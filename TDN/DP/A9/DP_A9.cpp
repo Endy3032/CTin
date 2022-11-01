@@ -3,8 +3,8 @@ using namespace std;
 
 ifstream inp("DP_A9.inp");
 ofstream out("DP_A9.out");
-// #define cin inp
-// #define cout out
+#define cin inp
+#define cout out
 
 typedef long long ll;
 ll w, h, m;
