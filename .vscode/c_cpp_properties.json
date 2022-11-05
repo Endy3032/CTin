@@ -4,23 +4,20 @@
 			"name": "Mac",
 			"includePath": ["${workspaceFolder}/**"],
 			"defines": [],
-			"intelliSenseMode": "macos-clang-x64",
+			"intelliSenseMode": "macos-gcc-x64",
 			"compilerPath": "/usr/bin/g++",
-			"cStandard": "c17",
-			"cppStandard": "c++17",
-			"macFrameworkPath": [
-				"/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks"
-			]
+			"cStandard": "gnu17",
+			"cppStandard": "gnu++17"
 		},
 		{
 			"name": "Win32",
 			"includePath": ["${workspaceFolder}/**"],
 			"defines": ["_DEBUG", "UNICODE", "_UNICODE"],
-			"intelliSenseMode": "windows-clang-x64",
+			"intelliSenseMode": "windows-gcc-x64",
 			"compilerPath": "c:\\mingw64\\bin\\g++.exe",
 			"compilerArgs": ["-static-libgcc", "-static-libstdc++"],
-			"cStandard": "c17",
-			"cppStandard": "c++17"
+			"cStandard": "gnu17",
+			"cppStandard": "gnu++17"
 		}
 	],
 	"version": 4
