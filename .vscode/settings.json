@@ -12,7 +12,8 @@
 		"random": "cpp",
 		"iomanip": "cpp",
 		"ios": "cpp",
-		"vector": "cpp"
+		"vector": "cpp",
+		"iostream": "cpp"
 	},
 	"cph.general.autoShowJudge": false,
 	"cph.general.defaultLanguage": "cpp",
