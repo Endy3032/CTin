@@ -6,6 +6,7 @@ ofstream out("sum.out");
 int a, b, r;
 
 int main() {
+  // 1 2000
   inp >> a >> b;
   for (int x = a; x <= b; x++) {
     stringstream s;
@@ -16,5 +17,6 @@ int main() {
       r += n[y] - '0';
     }
   }
+  // 28002
   out << r;
 }

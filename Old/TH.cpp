@@ -6,6 +6,7 @@ ofstream out("th.out");
 int m, n, k;
 
 int main() {
+  // 100 78 43
   inp >> m >> n >> k;
   if (m > n * 2) {
     int sub = min(m - n * 2, k);

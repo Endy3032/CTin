@@ -17,7 +17,9 @@ string val(long long x, string r, long long i = n - 1) {
 }
 
 int main() {
+  // 3 100 7
   inp >> n >> s >> x;
   string str(n, '0');
+  // 5 110
   out << loc(s) << endl << val(--x, str);
 }

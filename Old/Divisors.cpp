@@ -51,11 +51,13 @@ bool isMagicRaw(long long n) {
 }
 
 int main() {
+  // 1000
   inp >> n;
   for (long long i = 6; i <= n; i++) {
     if (isMagic(i)) c1++;
     if (isMagicRaw(i)) c2++;
     if (isMagic(i) != isMagicRaw(i)) cout << i << " " << isMagic(i) << isMagicRaw(i) << endl;
   }
+  // 302 292
   out << c1 << " " << c2;
 }

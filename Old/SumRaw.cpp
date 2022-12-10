@@ -6,6 +6,7 @@ ofstream out("sum.out");
 int a, b, r;
 
 int main() {
+  // 1 2000
   cin >> a >> b;
   for (int i = a; i <= b; i++) {
     int n = i;
@@ -14,5 +15,6 @@ int main() {
       n /= 10;
     }
   }
+  // 28002
   cout << r;
 }

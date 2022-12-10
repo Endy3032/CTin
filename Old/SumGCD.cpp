@@ -14,6 +14,7 @@ int main() {
   inp.tie(0);
   out.tie(0);
 
+  // 3 5000 500 250
   inp >> n;
   int nums[n], o[n];
   for (int i = 0; i < n; i++) {
@@ -30,5 +31,6 @@ int main() {
       }
     }
   }
+  // 61567426 442011 97295
   for (int i = 0; i < n; i++) out << o[i] << endl;
 }
