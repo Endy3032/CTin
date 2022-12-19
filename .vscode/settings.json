@@ -26,7 +26,9 @@
 		"limits": "cpp",
 		"sstream": "cpp",
 		"type_traits": "cpp",
-		"typeindex": "cpp"
+		"typeindex": "cpp",
+		"map": "cpp",
+		"ostream": "cpp"
 	},
 	"cph.general.autoShowJudge": false,
 	"cph.general.defaultLanguage": "cpp",
