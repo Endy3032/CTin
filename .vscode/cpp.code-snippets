@@ -1,0 +1,57 @@
+{
+	"Base": {
+		"prefix": "init",
+		"body": [
+			"#include <bits/stdc++.h>",
+			"using namespace std;",
+			"",
+			"typedef long long ll;",
+			"ll n;",
+			"",
+			"int main() {",
+			"\tios_base::sync_with_stdio(false);",
+			"\tcin.tie(NULL); cout.tie(NULL);",
+			"",
+			"\tcin >> n;",
+			"\t$0",
+			"}"
+		]
+	},
+	"Base with inp/out": {
+		"prefix": "initf",
+		"body": [
+			"#include <bits/stdc++.h>",
+			"using namespace std;",
+			"",
+			"ifstream inp(\"$1.inp\");",
+			"ofstream out(\"$1.out\");",
+			"// #define cin inp",
+			"// #define cout out",
+			"",
+			"typedef long long ll;",
+			"ll n;",
+			"",
+			"int main() {",
+			"\tios_base::sync_with_stdio(false);",
+			"\tcin.tie(NULL); cout.tie(NULL);",
+			"",
+			"\t$0",
+			"}"
+		]
+	},
+	"Check Prime": {
+		"prefix": "prime",
+		"body": [
+			"bool isPrime(ll n) {",
+			"\tif (n <= 7) return n > 1 && n != 4 && n != 6;",
+			"\tif (n % 2 == 0 || n % 3 == 0) return false;",
+			"",
+			"\tll rt = sqrt(n);",
+			"\tfor (ll i = 5; i <= rt; i += 6)",
+			"\tif (n % i == 0 || n % (i + 2) == 0) return false;",
+			"",
+			"\treturn true;",
+			"}"
+		]
+	}
+}

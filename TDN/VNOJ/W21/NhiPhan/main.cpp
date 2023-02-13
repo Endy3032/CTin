@@ -3,25 +3,23 @@ using namespace std;
 
 typedef long long ll;
 ll n;
-string s = "";
 
-void dewey(string s, string bit, ll cur, ll n) {
-  s += bit;
-  if (cur == n) {
-    cout << s << endl;
+void solve(string str, char val) {
+  str += val;
+  if (str.size() == n) {
+    cout << str << endl;
     return;
   }
-  dewey(s, "0", cur + 1, n);
-  dewey(s, "1", cur + 1, n);
+
+  solve(str, '0');
+  solve(str, '1');
 }
 
 int main() {
   ios_base::sync_with_stdio(false);
-  cin.tie(0);
-  cout.tie(0);
+  cin.tie(NULL); cout.tie(NULL);
 
   cin >> n;
-  dewey("", "0", 1, n);
-  dewey("", "1", 1, n);
-  return 0;
+  solve("", '0');
+  solve("", '1');
 }
