@@ -28,7 +28,8 @@
 		"type_traits": "cpp",
 		"typeindex": "cpp",
 		"map": "cpp",
-		"ostream": "cpp"
+		"ostream": "cpp",
+		"string": "cpp"
 	},
 	"cph.general.autoShowJudge": false,
 	"cph.general.defaultLanguage": "cpp",

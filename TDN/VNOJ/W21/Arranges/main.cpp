@@ -2,21 +2,21 @@
 using namespace std;
 
 typedef long long ll;
-ll n, chk[13];
+ll n, k, chk[21];
 
 void solve(vector<int> v, ll a) {
-  if (v.size() == n) {
-    for (auto i: v) cout << i << " ";
-		cout << endl;
+  if (v.size() == k) {
+    for (auto i: v) cout << i;
+    cout << endl;
     return;
   }
 
-  for (ll i = 0; i < a; i++) {
+  for (ll i = a; i <= n; i++) {
     if (chk[i]) continue;
     chk[i] = 1;
-		v.push_back(i + 1);
+    v.push_back(i);
     solve(v, a);
-		v.pop_back();
+    v.pop_back();
     chk[i] = 0;
   }
 }
@@ -26,7 +26,7 @@ int main() {
   cin.tie(NULL);
   cout.tie(NULL);
 
-  cin >> n;
-	vector<int> v;
-  for (ll i = 1; i <= n; i++) solve(v, i);
+  cin >> n >> k;
+  vector<int> v;
+  solve(v, 1);
 }
