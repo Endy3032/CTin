@@ -4,7 +4,6 @@ using namespace std;
 typedef long long ll;
 ll n, m, mn = LLONG_MAX, mx = LLONG_MIN;
 map<ll, ll> numMap;
-set<ll> numSet;
 
 int main() {
   ios_base::sync_with_stdio(false);
@@ -15,17 +14,12 @@ int main() {
   for (ll i = 0; i < n; i++) {
     cin >> m;
     numMap[m]++;
-    numSet.insert(m);
     mn = min(mn, m);
     mx = max(mx, m);
   }
 
   n = mx - mn;
-  m = 0;
+  m = numMap[mx] * (mx == mn ? ((numMap[mx] - 1) / 2) : numMap[mn]);
 
-  for (auto i: numSet) {
-    if (numMap[i + n] != 0) m += min(numMap[i], numMap[i + n]);
-    if (numMap[i - n] != 0) m += min(numMap[i], numMap[i - n]);
-  }
   cout << n << " " << m << endl;
 }
