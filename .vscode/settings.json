@@ -1,37 +1,3 @@
 {
-	"files.exclude": {
-		"**/.git": true,
-		"**/.svn": true,
-		"**/.hg": true,
-		"**/CVS": true,
-		"**/.DS_Store": true,
-		"**/Thumbs.db": true
-	},
-	"hide-files.files": [],
-	"files.associations": {
-		"random": "cpp",
-		"iomanip": "cpp",
-		"ios": "cpp",
-		"vector": "cpp",
-		"iostream": "cpp",
-		"compare": "cpp",
-		"functional": "cpp",
-		"valarray": "cpp",
-		"variant": "cpp",
-		"bit": "cpp",
-		"*.tcc": "cpp",
-		"algorithm": "cpp",
-		"future": "cpp",
-		"istream": "cpp",
-		"limits": "cpp",
-		"sstream": "cpp",
-		"type_traits": "cpp",
-		"typeindex": "cpp",
-		"map": "cpp",
-		"ostream": "cpp",
-		"string": "cpp"
-	},
-	"cph.general.autoShowJudge": false,
-	"cph.general.defaultLanguage": "cpp",
-	"cph.general.timeOut": 1000
+	"prettier.useTabs": false,
 }
