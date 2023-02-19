@@ -1,7 +1,7 @@
 {
 	"explorer.fileNesting.enabled": true,
 	"explorer.fileNesting.patterns": {
-		"*.cpp": "${capture}.exe, ${capture}.dSYM"
+		"*.cpp": "${capture}.exe, ${capture}",
 	},
 	"prettier.useTabs": false,
 }
