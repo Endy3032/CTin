@@ -2,21 +2,20 @@
 using namespace std;
 
 typedef long long ll;
-ll n, sm;
+ll n;
 
-void solve(vector<int> v, ll a) {
+void solve(vector<int> v, ll a, ll sm) {
   if (sm == n) {
     for (auto i: v) cout << i << " ";
     cout << endl;
     return;
-  } else if (sm > n) return;
+  }
 
   for (int i = a; i < n; i++) {
-    sm += i;
     v.push_back(i);
-    solve(v, i);
+    if (sm + i > n) return;
+    solve(v, i, sm + i);
     v.pop_back();
-    sm -= i;
   }
 }
 
@@ -27,5 +26,5 @@ int main() {
 
   cin >> n;
   vector<int> v;
-  solve(v, 1);
+  solve(v, 1, 0);
 }
