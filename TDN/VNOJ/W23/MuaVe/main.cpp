@@ -2,38 +2,29 @@
 using namespace std;
 
 typedef long long ll;
-ll n, h, t, a, i;
+ll n, h, t, a;
 
 int main() {
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
 
 	cin >> n >> h >> t;
-	vector<pair<ll, ll>> m;
+
+	queue<pair<ll, ll>> q;
+	vector<ll> o(n);
 
 	for (ll i = 0; i < n; i++) {
 		cin >> a;
-		m.push_back({a, 0});
+		q.push({a, i});
 	}
 
-	a = 0;
-	i = 0;
-	while (a < t) {
-		i = i % n;
-		if (m[i].first < h) {
-			if (m[i].second == 0) m[i].second++;
-			else {
-				i++;
-				continue;
-			}
-		} else {
-			m[i].second++;
-		}
-		a++;
-		i++;
-		// cout << i << " " << m[i].first << " " << m[i].second << endl;
+	while (t-- && !q.empty()) {
+		auto i = q.front();
+		if (i.first > h) q.push(i);
+		q.pop();
+		o[i.second]++;
 	}
 
-	for (auto i: m) cout << i.second << " ";
+	for (auto i: o) cout << i << " ";
 	cout << endl;
 }
