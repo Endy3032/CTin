@@ -7,9 +7,9 @@ ll xa, ya, xb, yb;
 
 void solve() {
 	if (ya == yb) {
-		cout << xa << sp << (ya + abs(xa - xb)) << sp << xb << sp << (yb + abs(xa - xb));
+		cout << xa << sp << (ya + xa - xb) << sp << xb << sp << (yb + xa - xb);
 	} else if (xa == xb) {
-		cout << (xa + abs(ya - yb)) << sp << ya << sp << (xb + abs(ya - yb)) << sp << yb;
+		cout << (xa + ya - yb) << sp << ya << sp << (xb + ya - yb) << sp << yb;
 	} else if (abs(xa - xb) == abs(ya - yb)) {
 		cout << xa << sp << yb << sp << xb << sp << ya;
 	} else {
