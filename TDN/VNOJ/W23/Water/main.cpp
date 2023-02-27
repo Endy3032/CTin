@@ -15,11 +15,11 @@ bool cmp(student a, student b) {
 void solve() {
 	cin >> n;
 	vector<student> a(n);
-	vector<ll> o;
+	vector<ll> o(n);
 
 	for (int i = 0; i < n; i++) {
 		cin >> x >> y;
-		a[i].id = i + 1;
+		a[i].id = i;
 		a[i].i = x;
 		a[i].o = y;
 	}
@@ -35,10 +35,10 @@ void solve() {
 		q.pop();
 
 		if (i.o < x) {
-			o.push_back(0);
+			o[i.id] = 0;
 			continue;
 		}
-		o.push_back(x);
+		o[i.id] = x;
 		x++;
 	}
 
