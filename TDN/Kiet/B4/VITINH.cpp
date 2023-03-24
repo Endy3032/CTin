@@ -1,17 +1,22 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-ifstream inp("VITINH.inp");
-ofstream out("VITINH.out");
-
 typedef long long ll;
-ll n, o = 0;
+ll n;
+
+ll solve(ll n) {
+	ll o = 0, tn = 10;
+	ll mx = log10(n) == ceil(log10(n)) ? log10(n) + 1 : ceil(log10(n));
+
+	for (ll i = 1; i <= mx; i++) {
+		o += min(n - tn / 10 + 1, tn - tn / 10) * i;
+		tn *= 10;
+	}
+
+	return o;
+}
 
 int main() {
 	cin >> n;
-	ll mx = ceil(log10(n));
-	for (ll i = 1; i <= mx; i++) {
-		o += i * ((min(ll(pow(10, mx)), n) - (pow(10, mx))) / 2 + 1);
-	}
-	cout << o << endl;
+	cout << solve(n) << endl;
 }
