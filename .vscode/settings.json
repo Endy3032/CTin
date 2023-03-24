@@ -1,25 +1,11 @@
 {
 	"explorer.fileNesting.enabled": true,
 	"explorer.fileNesting.patterns": {
-		"*.cpp": "${capture}.exe, ${capture}",
+		"*.cpp": "${capture}.exe, ${capture}, ${capture}.inp, ${capture}.out",
 	},
 	"prettier.useTabs": false,
 	"files.associations": {
-		"array": "cpp",
-		"deque": "cpp",
-		"forward_list": "cpp",
-		"list": "cpp",
-		"string": "cpp",
-		"unordered_map": "cpp",
-		"unordered_set": "cpp",
-		"vector": "cpp",
-		"string_view": "cpp",
-		"initializer_list": "cpp",
-		"ranges": "cpp",
-		"span": "cpp",
-		"stacktrace": "cpp",
-		"regex": "cpp",
-		"valarray": "cpp",
-		"__split_buffer": "cpp"
-	},
+		"iostream": "cpp",
+		"ostream": "cpp"
+	}
 }
