@@ -2,48 +2,45 @@
 using namespace std;
 
 typedef long long ll;
-ll n, o = 0;
+ll n, y, o = 0;
 
 int main() {
-	ios_base::sync_with_stdio(false);
-	cin.tie(NULL);
+  ios_base::sync_with_stdio(false);
+  cin.tie(NULL);
 
-	cin >> n;
+  cin >> n;
+  vector<ll> a(n), b(n);
+  for (int i = 0; i < n; i++) cin >> a[i] >> b[i];
+  sort(a.begin(), a.end());
+  sort(b.begin(), b.end());
 
-	vector<ll> a(n), b(n);
-	for (int i = 0; i < n; i++) cin >> a[i] >> b[i];
-	sort(a.begin(), a.end());
-	sort(b.begin(), b.end());
-
-	n = a.size(), o = 0;
-	while (o < n) {
-		if (a[n - 1 - o] > b[n - 1 - o]) {
-			b.erase(b.begin() + n - o - 1);
-			a.erase(a.begin() + o);
-		} else if (a[o] <= b[o]) {
-			break;
-		} else {
-			o--;
+	y = 0;
+	while (y < b.size()) {
+		ll x = a.size() - 1, found = 0;
+		while (x >= 0) {
+			if (a[x] < b[y]) {
+				o += 2, found = 1;
+				a.erase(a.begin() + x);
+				b.erase(b.begin() + y);
+				break;
+			} x--;
 		}
+		if (!found) y++;
 	}
 
-	n = b.size(), o = 0;
-	while (o < n) {
-		if (b[o] < a[o]) {
-			b.erase(b.begin() + o);
-			a.erase(a.begin() + n - o - 1);
-		} else if (b[o] >= a[o]) {
-			break;
-		} else {
-			o++;
+	y = 0;
+	while (y < b.size()) {
+		ll x = a.size() - 1, found = 0;
+		while (x >= 0) {
+			if (a[x] == b[y]) {
+				o++, found = 1;
+				a.erase(a.begin() + x);
+				b.erase(b.begin() + y);
+				break;
+			} x--;
 		}
+		if (!found) y++;
 	}
 
-	o = 0;
-	for (ll i = 0; i < a.size(); i++) {
-		if (b[i] == a[i]) o++;
-		else if (b[i] > a[i]) o += 2;
-	}
-
-	cout << o << endl;
+  cout << o << endl;
 }
