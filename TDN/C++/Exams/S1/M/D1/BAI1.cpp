@@ -13,3 +13,11 @@ int main() {
     else cout << -1;
     cout << endl;
 }
+
+/**
+ * Input
+ * 1000000000000000000
+ *
+ * Output
+ * 1000000000
+*/
