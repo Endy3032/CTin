@@ -53,3 +53,11 @@ int main() {
 	for (ll i = l; i < r; i++) if (sumPrime(i)) c++;
 	cout << c << endl;
 }
+
+/**
+ * Input
+ * 0 10000000
+ *
+ * Output
+ * 3293145
+*/
