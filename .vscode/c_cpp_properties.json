@@ -3,19 +3,25 @@
 		{
 			"name": "Mac",
 			"includePath": ["${workspaceFolder}/**"],
-			"defines": [],
 			"intelliSenseMode": "macos-gcc-x64",
-			"compilerPath": "/usr/bin/g++",
+			"compilerPath": "/usr/local/bin/g++-12",
 			"cStandard": "gnu17",
 			"cppStandard": "gnu++17"
 		},
 		{
 			"name": "Win32",
 			"includePath": ["${workspaceFolder}/**"],
-			"defines": ["_DEBUG", "UNICODE", "_UNICODE"],
 			"intelliSenseMode": "windows-gcc-x64",
 			"compilerPath": "c:\\mingw64\\bin\\g++.exe",
 			"compilerArgs": ["-static-libgcc", "-static-libstdc++"],
+			"cStandard": "gnu17",
+			"cppStandard": "gnu++17"
+		},
+		{
+			"name": "Linux",
+			"includePath": ["${workspaceFolder}/**"],
+			"intelliSenseMode": "linux-gcc-x64",
+			"compilerPath": "/usr/bin/g++",
 			"cStandard": "gnu17",
 			"cppStandard": "gnu++17"
 		}

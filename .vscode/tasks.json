@@ -16,6 +16,17 @@
 				]
 			},
 			"osx": {
+				"command": "/usr/local/bin/g++-12",
+				"args": [
+					"-fdiagnostics-color=always",
+					"-std=c++17",
+					"-g",
+					"${file}",
+					"-o",
+					"${fileDirname}/${fileBasenameNoExtension}"
+				]
+			},
+			"linux": {
 				"command": "/usr/bin/g++",
 				"args": [
 					"-fdiagnostics-color=always",
@@ -36,7 +47,7 @@
 			},
 			"presentation": {
 				"reveal": "silent",
-				"panel": "dedicated"
+				"showReuseMessage": false
 			}
 		}
 	]
