@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#define fix fixed << setprecision(0)
 typedef long long ll;
 typedef double db;
 
@@ -19,6 +18,6 @@ int main() {
   cin >> n;
 	db r = binpow(2, n);
   stringstream s;
-  s << fix << r;
+  s << fixed << setprecision(0) << r;
   cout << s.str() << endl;
 }

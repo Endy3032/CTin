@@ -34,3 +34,8 @@ int main() {
   else cout << "NO";
   cout << endl;
 }
+
+/**
+ * Input
+ * 1 0 2 1 0 1 1 1
+*/
