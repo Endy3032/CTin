@@ -2,9 +2,9 @@
 	"configurations": [
 		{
 			"name": "Mac",
-			"includePath": ["${workspaceFolder}/**"],
+			"includePath": ["${workspaceFolder}/**", "/usr/local/include/**"],
 			"intelliSenseMode": "macos-gcc-x64",
-			"compilerPath": "/usr/local/bin/g++-12",
+			"compilerPath": "/usr/bin/g++",
 			"cStandard": "gnu17",
 			"cppStandard": "gnu++17"
 		},
