@@ -2,34 +2,23 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
-			"label": "C/C++: Build active file",
-			"detail": "Windows/Linux",
-			"command": "g++-13",
-			"windows": {
-				"command": "c:\\mingw64\\bin\\g++.exe",
-				"args": [
-					"-fdiagnostics-color=always",
-					"-static-libgcc",
-					"-static-libstdc++",
-					"-g",
-					"${file}",
-					"-o",
-					"${fileDirname}/${fileBasenameNoExtension}"
-				]
-			},
-			"linux": {
-				"command": "/usr/bin/g++",
-				"args": [
-					"-fdiagnostics-color=always",
-					"-std=c++17",
-					"-g",
-					"${file}",
-					"-o",
-					"${fileDirname}/${fileBasenameNoExtension}"
-				]
+			"type": "shell",
+			"label": "C++: Build active file",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-static-libgcc",
+				"-static-libstdc++",
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}/${fileBasenameNoExtension}"
+			],
+			"command": "g++",
+			"osx": {
+				"command": "g++-13",
 			},
 			"options": {
-				"cwd": "${workspaceFolder}"
+				"cwd": "${fileDirname}"
 			},
 			"problemMatcher": [
 				"$gcc"
@@ -38,36 +27,20 @@
 				"kind": "build"
 			},
 			"presentation": {
-				"reveal": "silent",
 				"showReuseMessage": false
 			}
 		},
 		{
-			"type": "cppbuild",
-			"label": "C/C++: Build active file",
-			"command": "/usr/local/bin/g++-13",
-			"args": [
-				"-fdiagnostics-color=always",
-				"-g",
-				"${file}",
-				"-o",
-				"${fileDirname}/${fileBasenameNoExtension}"
-			],
-			"options": {
-				"cwd": "${workspaceFolder}"
-			},
-			"problemMatcher": [
-				"$gcc"
-			],
+			"type": "shell",
+			"label": "C++: Run active file",
+			"dependsOn": ["C++: Build active file"],
+			"dependsOrder": "sequence",
+			"command": "${fileDirname}/${fileBasenameNoExtension}",
+			"problemMatcher": ["$gcc"],
 			"group": {
-				"kind": "build",
+				"kind": "test",
 				"isDefault": true
-			},
-			"presentation": {
-				"reveal": "silent",
-				"showReuseMessage": false
-			},
-			"detail": "macOS"
+			}
 		}
 	]
 }
