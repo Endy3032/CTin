@@ -1,5 +1,6 @@
 {
-	"editor.formatOnPaste": false,
+	"editor.formatOnPaste": true,
+	"editor.formatOnSave": true,
 	"explorer.fileNesting.enabled": true,
 	"explorer.fileNesting.patterns": {
 		"*.cpp": "${capture}.exe, ${capture}, ${capture}.inp, ${capture}.out",

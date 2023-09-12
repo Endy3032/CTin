@@ -15,7 +15,7 @@
 			],
 			"command": "g++",
 			"osx": {
-				"command": "g++-13",
+				"command": "g++-13"
 			},
 			"options": {
 				"cwd": "${fileDirname}"
@@ -27,19 +27,28 @@
 				"kind": "build"
 			},
 			"presentation": {
+				"reveal": "silent",
 				"showReuseMessage": false
 			}
 		},
 		{
 			"type": "shell",
 			"label": "C++: Run active file",
-			"dependsOn": ["C++: Build active file"],
+			"dependsOn": [
+				"C++: Build active file"
+			],
 			"dependsOrder": "sequence",
 			"command": "${fileDirname}/${fileBasenameNoExtension}",
-			"problemMatcher": ["$gcc"],
+			"problemMatcher": [
+				"$gcc"
+			],
 			"group": {
-				"kind": "test",
+				"kind": "build",
 				"isDefault": true
+			},
+			"presentation": {
+				"showReuseMessage": true,
+				"focus": true
 			}
 		}
 	]
