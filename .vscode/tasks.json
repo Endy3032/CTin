@@ -27,6 +27,7 @@
 				"kind": "build"
 			},
 			"presentation": {
+				"panel": "shared",
 				"reveal": "silent",
 				"showReuseMessage": false
 			}
@@ -47,6 +48,7 @@
 				"isDefault": true
 			},
 			"presentation": {
+				"panel": "shared",
 				"showReuseMessage": true,
 				"focus": true
 			}
