@@ -3,6 +3,7 @@ using namespace std;
 
 typedef long long ll;
 ll n, a;
+string s;
 
 int main() {
   ios_base::sync_with_stdio(false);
@@ -11,24 +12,14 @@ int main() {
   cin >> n;
   cin.ignore();
 
-	string s;
-  vector<vector<ll>> ns(n), gr(n, vector<ll>(n));
-
   for (ll i = 0; i < n; i++) {
     getline(cin, s);
     stringstream ss(s);
-    while (ss >> a) ns[i].push_back(a);
-  }
 
-  for (ll i = 0; i < n; i++) {
-    for (auto j : ns[i]) {
-      gr[i][j - 1] = 1;
-      gr[j - 1][i] = 1;
-    }
-  }
+    vector<ll> ns(n, 0);
+    while (ss >> a) ns[a - 1] = 1;
 
-  for (auto x : gr) {
-    for (auto y : x) cout << y << " ";
+    for (auto m: ns) cout << m << " ";
     cout << endl;
   }
 }
