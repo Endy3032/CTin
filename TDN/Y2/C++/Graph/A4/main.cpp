@@ -15,12 +15,16 @@ int main() {
 	for (ll y = 0; y < n; y++) {
 		for (ll x = 0; x < n; x++) {
 			cin >> ns[y][x];
+			if (!ns[y][x]) continue;
+
+			ans[y].insert(x);
+			ans[x].insert(y);
 		}
 	}
 
-	for (ll x = 1; x < n; x++) {
-		for (ll y = 0; y < x; y++) {
-			if (ns[y][x]) ans.push_back({ min(x, y) + 1, max(x, y) + 1 });
-		}
+	for (ll i = 0; i < n; i++) {
+		cout << i + 1 << ":";
+		for (auto j: ans[i]) cout << " " << j + 1;
+		cout << endl;
 	}
 }
