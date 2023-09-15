@@ -24,7 +24,8 @@
 				"$gcc"
 			],
 			"group": {
-				"kind": "build"
+				"kind": "build",
+				"isDefault": true
 			},
 			"presentation": {
 				"panel": "shared",
@@ -35,6 +36,23 @@
 		{
 			"type": "shell",
 			"label": "C++: Run active file",
+			"command": "${fileDirname}/${fileBasenameNoExtension}",
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "test",
+				"isDefault": true
+			},
+			"presentation": {
+				"panel": "shared",
+				"showReuseMessage": true,
+				"focus": true
+			},
+		},
+		{
+			"type": "shell",
+			"label": "C++: Build & run active file",
 			"dependsOn": [
 				"C++: Build active file"
 			],
@@ -44,8 +62,7 @@
 				"$gcc"
 			],
 			"group": {
-				"kind": "build",
-				"isDefault": true
+				"kind": "test",
 			},
 			"presentation": {
 				"panel": "shared",
