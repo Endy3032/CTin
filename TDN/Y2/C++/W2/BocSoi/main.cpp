@@ -3,15 +3,14 @@ using namespace std;
 
 typedef long long ll;
 ll n;
-float x, y, ans = 0.0;
+double x, y, ans = 0.0;
+priority_queue<double, vector<double>, greater<double>> q;
 
 int main() {
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL); cout.tie(NULL);
 
 	cin >> n;
-	priority_queue<float, vector<float>, greater<float>> q;
-
 	while (n--) {
 		cin >> x;
 		q.push(x);
