@@ -3,20 +3,26 @@ using namespace std;
 
 int n, m, a, b;
 
-void bfs(vector<set<int>> &nodes, vector<bool> &visited, vector<int> &parent, int i) {
-  if (visited[i]) return;
-  visited[i] = true;
-  for (int j : nodes[i]) {
-    if (visited[j]) continue;
-    parent[j] = i;
-    bfs(nodes, visited, parent, j);
-  }
-}
-
-bool solve(vector<set<int>> &nodes, vector<int> &weight, int s, int t) {
+bool bfs(vector<set<int>> &nodes, vector<int> &weight, int s, int t) {
+  queue<int> q;
   vector<int> parent(n, -1);
   vector<bool> visited(n, 0);
-  bfs(nodes, visited, parent, s);
+
+  q.push(s);
+  visited[s] = true;
+
+  while (!q.empty()) {
+    int u = q.front();
+    q.pop();
+
+    for (int v: nodes[u]) {
+      if (!visited[v]) {
+        q.push(v);
+        parent[v] = u;
+        visited[v] = 1;
+      }
+    }
+  }
 
   while (t != -1) {
     if (weight[t] == 2) return true;
@@ -42,6 +48,6 @@ int main() {
 
   for (int i = 0; i < m; i++) {
     cin >> a >> b;
-    cout << (solve(ns, w, --a, --b) ? "YES" : "NO") << endl;
+    cout << (bfs(ns, w, --a, --b) ? "YES" : "NO") << endl;
   }
 }
