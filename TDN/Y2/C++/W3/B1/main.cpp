@@ -13,7 +13,7 @@ void bfs(vector<set<int>> &nodes) {
 	while (!q.empty()) {
 		int u = q.front(); q.pop();
 
-		for (int v : nodes[u]) {
+		for (int v: nodes[u]) {
 			if (!visited[v]) {
 				q.push(v);
 				visited[v] = 1;
