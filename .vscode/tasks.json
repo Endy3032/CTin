@@ -6,8 +6,6 @@
 			"label": "C++: Build active file",
 			"args": [
 				"-fdiagnostics-color=always",
-				"-static-libgcc",
-				"-static-libstdc++",
 				"-g",
 				"${file}",
 				"-o",
