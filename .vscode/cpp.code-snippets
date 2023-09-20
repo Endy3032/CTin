@@ -39,6 +39,18 @@
 			"}"
 		]
 	},
+	"Base LeetCode": {
+		"prefix": "initlc",
+		"body": [
+			"#include <bits/stdc++.h>",
+			"using namespace std;",
+			"",
+			"class Solution {",
+			"public:",
+			"\t$0",
+			"};"
+		]
+	},
 	"Check Prime": {
 		"prefix": "prime",
 		"body": [
