@@ -3,45 +3,35 @@ using namespace std;
 
 int n, m, a, b;
 
-void bfs(vector<set<int>> &nodes, vector<bool> &visited, vector<int> &parent, int i) {
-  if (visited[i]) return;
-  visited[i] = true;
-  for (int j : nodes[i]) {
-    if (visited[j]) continue;
-    parent[j] = i;
-    bfs(nodes, visited, parent, j);
-  }
+void bfs(vector<set<int>> &nodes, vector<bool> &visited, int &s, int &t) {
+	if (visited[s]) return;
+	visited[s] = true;
+	if (s == t) return;
+	for (int j: nodes[s]) bfs(nodes, visited, j, t);
 }
 
-bool solve(vector<set<int>> &nodes, vector<int> &weight, int s, int t) {
-  vector<int> parent(n, -1);
-  vector<bool> visited(n, 0);
-  bfs(nodes, visited, parent, s);
-
-  while (t != -1) {
-    if (weight[t] == 2) return true;
-    t = parent[t];
-  }
-  return false;
+bool solve(vector<set<int>> &nodes, int &s, int &t) {
+	vector<bool> visited(n, 0);
+	bfs(nodes, visited, s, t);
+	return !visited[t];
 }
 
 int main() {
-  ios_base::sync_with_stdio(false);
-  cin.tie(NULL); cout.tie(NULL);
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL); cout.tie(NULL);
 
-  cin >> n >> m;
-  vector<set<int>> ns(n);
-  vector<int> w(n, 1);
+	cin >> n >> m;
+	vector<set<int>> ns(n);
 
-  for (int i = 0; i < n - 1; i++) {
-    cin >> a >> b;
-    ns[i + 1].insert(--a);
-    ns[a].insert(i + 1);
-    w[i + 1] = b;
-  }
+	for (int i = 0; i < n - 1; i++) {
+		cin >> a >> b;
+		if (b == 2) continue;
+		ns[i + 1].insert(--a);
+		ns[a].insert(i + 1);
+	}
 
-  for (int i = 0; i < m; i++) {
-    cin >> a >> b;
-    cout << (solve(ns, w, --a, --b) ? "YES" : "NO") << endl;
-  }
+	for (int i = 0; i < m; i++) {
+		cin >> a >> b;
+		cout << (solve(ns, --a, --b) ? "YES" : "NO") << endl;
+	}
 }
