@@ -5,10 +5,7 @@ class Solution {
 public:
 	string removeDuplicates(string s) {
 		string ans;
-
-		for (int i = 0; i < s.length(); i++)
-			ans.empty() || ans.back() != s[i] ? ans.push_back(s[i]) : ans.pop_back();
-
+		for (auto i: s) ans.empty() || ans.back() != i ? ans.push_back(i) : ans.pop_back();
 		return ans;
 	}
 };
