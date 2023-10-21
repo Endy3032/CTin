@@ -10,7 +10,7 @@
 		},
 		{
 			"name": "Win32",
-			"includePath": ["${workspaceFolder}/**"],
+			"includePath": ["${workspaceFolder}/**", "c:\\mingw64\\include\\**"],
 			"intelliSenseMode": "windows-gcc-x64",
 			"compilerPath": "c:\\mingw64\\bin\\g++.exe",
 			"compilerArgs": ["-static-libgcc", "-static-libstdc++"],
