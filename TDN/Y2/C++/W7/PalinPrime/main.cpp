@@ -10,31 +10,19 @@ void prime(vector<bool> &v) {
 	}
 }
 
-bool isPalindrome(ll i) {
-	stringstream ss;
-	ss << i;
-	string s1 = ss.str();
-	string s2 = ss.str();
-	reverse(s2.begin(), s2.end());
-	return s1 == s2;
-}
-
-int sumDigits(ll i) {
+int sum(ll i) {
 	int o = 0;
-	while (i) {
-		o += i % 10;
-		i /= 10;
-	}
+	while (i) o += i % 10, i /= 10;
 	return o;
 }
 
-int lengthNum(ll i) {
-	int o = 0;
+ll toPalindrome(ll i, ll x) {
+	ll out = i * (x != -1 ? 10 : 1) + (x != -1 ? x : 0);
 	while (i) {
-		o++;
+		out = out * 10 + i % 10;
 		i /= 10;
 	}
-	return o;
+	return out;
 }
 
 int main() {
@@ -44,13 +32,22 @@ int main() {
 	ll l, r, c = 0;
 	cin >> l >> r;
 
-	vector<bool> p(9 * lengthNum(r) + 1, 1);
-	p[0] = 1, p[1] = 1;
+	vector<bool> p(110, 1);
+	p[0] = p[1] = 0;
 	prime(p);
 
-	for (ll i = l; i <= r; i++) {
-		if (isPalindrome(i) && p[sumDigits(i)]) c++;
-	}
+	for (ll i = 1; i <= 100000; i++) {
+		if (i < 10 && l <= i && i <= r && p[i]) c++;
 
+		ll a = toPalindrome(i, -1);
+		if (a > r) continue;
+		if (l <= a && p[sum(a)]) c++;
+
+		for (int j = 0; j < 10; j++) {
+			a = toPalindrome(i, j);
+			if (a > r) break;
+			else if (a >= l && p[sum(a)]) c++;
+		}
+	}
 	cout << c << endl;
 }
