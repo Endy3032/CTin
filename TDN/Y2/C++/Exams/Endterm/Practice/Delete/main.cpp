@@ -2,7 +2,7 @@
 using namespace std;
 
 typedef long long ll;
-ll n, c = 0, o = 0;
+ll n, x, dp = 0, c = 0, o = 0;
 const ll mod = ll(1e9) + 7;
 
 int main() {
@@ -11,16 +11,9 @@ int main() {
 
 	cin >> n;
 
-	vector<int> ns(n + 1, 0), dp(n + 1, 0);
-	for (ll i = 1; i <= n; i++) {
-		cin >> ns[i];
-		dp[i] = dp[i - 1];
-
-		if (ns[i] == 1) c++;
-		else if (ns[i] == 2) dp[i] += dp[i - 1] + c;
-		else o += dp[i];
-
-		o %= mod, dp[i] %= mod;
+	while (n--) {
+		cin >> x;
+		x == 1 ? c++ : x == 2 ? dp = (dp * 2 + c) % mod : o = (o + dp) % mod;
 	}
 
 	cout << o << endl;
