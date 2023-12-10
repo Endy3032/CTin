@@ -15,8 +15,8 @@ int main() {
 
 	pair<ll, ll> o = { ns[0].first, ns[0].second };
 	for (auto &a : ns) {
-		if (a.second <= o.second) continue;
-		o = a.first <= o.second ? pair(o.first, a.second) : a;
+		if (a.first <= o.second && a.second > o.second) o.second = a.second;
+		else if (a.first > o.second && a.second > o.second) o = a;
 		c = max(c, o.second - o.first);
 	}
 
