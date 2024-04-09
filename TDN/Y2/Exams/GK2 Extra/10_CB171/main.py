@@ -1,0 +1,5 @@
+mx = int(input().strip())
+_, *p = map(int, input().split())
+_, *q = map(int, input().split())
+s = set([*p, *q])
+print("YES" if len(s) == mx else "NO")

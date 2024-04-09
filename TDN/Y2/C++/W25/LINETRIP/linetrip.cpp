@@ -2,18 +2,14 @@
 using namespace std;
 
 typedef long long ll;
-ll n, x, mn = 0, mx = 0;
+ll n, x, mn, mx;
 
 int main() {
 	ios_base::sync_with_stdio(false);
-	cin.tie(NULL);
+	cin.tie(NULL); cout.tie(NULL);
 
 	cin >> n;
 	while (n--) {
-		cin >> x;
-		mn = min(mn, x);
-		mx = max(mx, x);
+		cin
 	}
-
-	cout << abs(mx - mn) * 2 << endl;
 }
