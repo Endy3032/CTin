@@ -6,5 +6,10 @@
 	},
 	"editor.detectIndentation": false,
 	"C_Cpp.intelliSenseCacheSize": 128,
-	"C_Cpp.default.browse.path": [""]
+	"C_Cpp.default.browse.path": [""],
+	"[python]": {
+		"editor.wordBasedSuggestions": "matchingDocuments",
+		"editor.defaultFormatter": "ms-python.black-formatter",
+		"editor.formatOnSave": true,
+	}
 }
