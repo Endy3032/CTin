@@ -13,7 +13,7 @@
 			],
 			"command": "g++",
 			"osx": {
-				"command": "g++-13"
+				"command": "g++-14"
 			},
 			"options": {
 				"cwd": "${fileDirname}"
@@ -35,12 +35,14 @@
 			"type": "shell",
 			"label": "C++: Run active file",
 			"command": "${fileDirname}/${fileBasenameNoExtension}",
+			"options": {
+				"cwd": "${fileDirname}"
+			},
 			"problemMatcher": [
 				"$gcc"
 			],
 			"group": {
 				"kind": "test",
-				"isDefault": true
 			},
 			"presentation": {
 				"panel": "shared",
@@ -56,11 +58,15 @@
 			],
 			"dependsOrder": "sequence",
 			"command": "${fileDirname}/${fileBasenameNoExtension}",
+			"options": {
+				"cwd": "${fileDirname}"
+			},
 			"problemMatcher": [
 				"$gcc"
 			],
 			"group": {
 				"kind": "test",
+				"isDefault": true
 			},
 			"presentation": {
 				"panel": "shared",

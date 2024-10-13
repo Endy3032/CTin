@@ -2,9 +2,9 @@
 	"configurations": [
 		{
 			"name": "Mac",
-			"includePath": ["${workspaceFolder}/**", "/usr/local/include/**"],
+			"includePath": ["/usr/local/include/c++/**"],
 			"intelliSenseMode": "macos-gcc-x64",
-			"compilerPath": "/usr/local/bin/g++-13",
+			"compilerPath": "/usr/local/bin/g++-14",
 			"cStandard": "gnu17",
 			"cppStandard": "gnu++17"
 		},
@@ -14,8 +14,8 @@
 			"intelliSenseMode": "windows-gcc-x64",
 			"compilerPath": "c:\\mingw64\\bin\\g++.exe",
 			"compilerArgs": ["-static-libgcc", "-static-libstdc++"],
-			"cStandard": "gnu17",
-			"cppStandard": "gnu++17"
+			"cStandard": "gnu11",
+			"cppStandard": "gnu++11"
 		},
 		{
 			"name": "Linux",
