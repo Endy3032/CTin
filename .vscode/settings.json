@@ -2,7 +2,7 @@
 	"editor.formatOnPaste": true,
 	"explorer.fileNesting.enabled": true,
 	"explorer.fileNesting.patterns": {
-		"*.cpp": "${capture}.exe, ${capture}, ${capture}.inp, ${capture}.out",
+		"*.cpp": "${capture}.exe, ${capture}, ${capture}.inp, ${capture}.out, ${capture}.inpx, ${capture}.outx",
 	},
 	"editor.detectIndentation": false,
 	"C_Cpp.intelliSenseCacheSize": 128,
