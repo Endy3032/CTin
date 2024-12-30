@@ -7,15 +7,23 @@ if abs(x) == abs(y) or x == 0 or y == 0:
 
 if x > 0:
 	if y > 0:
-		if y > x: print(1)
-		elif x > y: print(2)
+		if y > x:
+			print(1)
+		elif x > y:
+			print(2)
 	elif y < 0:
-		if x > abs(y): print(3)
-		elif abs(y) > x: print(4)
+		if x > abs(y):
+			print(3)
+		elif abs(y) > x:
+			print(4)
 elif x < 0:
 	if y < 0:
-		if abs(y) > abs(x): print(5)
-		elif abs(x) > abs(y): print(6)
+		if abs(y) > abs(x):
+			print(5)
+		elif abs(x) > abs(y):
+			print(6)
 	elif y > 0:
-		if abs(x) > y: print(7)
-		elif y > abs(x): print(8)
+		if abs(x) > y:
+			print(7)
+		elif y > abs(x):
+			print(8)

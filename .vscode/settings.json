@@ -9,7 +9,8 @@
 	"C_Cpp.default.browse.path": [""],
 	"[python]": {
 		"editor.wordBasedSuggestions": "matchingDocuments",
-		"editor.defaultFormatter": "ms-python.black-formatter",
+		"editor.defaultFormatter": "charliermarsh.ruff",
 		"editor.formatOnSave": true,
-	}
+	},
+	"python.terminal.activateEnvironment": false
 }

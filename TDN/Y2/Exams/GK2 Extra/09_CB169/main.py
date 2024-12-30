@@ -17,8 +17,10 @@ p[0] = 0
 p[1] = 0
 
 for i in range(2, mx + 1):
-	if not p[i]: continue
-	for j in range(i * i, mx + 1, i): p[j] = 0
+	if not p[i]:
+		continue
+	for j in range(i * i, mx + 1, i):
+		p[j] = 0
 
 for ls in ts:
 	mx = 0
